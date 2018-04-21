@@ -1,0 +1,15 @@
+.Title .edit-icon{
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.Title:hover .edit-icon{
+    opacity: 1;
+}
+
+.Ttitle .form-controll{
+    height: 68px;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px 20px;
+}
