@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import './Controller.css'
 class Controller extends Component{
     constructor(props){
         super(props)
@@ -45,7 +45,7 @@ class Controller extends Component{
         let output = null
         if(this.state.start && !this.state.reset){
             output = (
-                <div>
+                <div className="controller-block">
                     <button 
                        className="btn btn-success btn-lg px-5 ml-5"
                        onClick={event => this.startHandler()}
@@ -54,7 +54,7 @@ class Controller extends Component{
                 </div>
             )
         }else if(this.state.pause && this.state.lap){
-            output=(<div>
+            output=(<div className="controller-block">
                 <button 
                        className="btn btn-primary btn-lg px-5 ml-5"
                        onClick={event => this.pauseHandler()}
@@ -67,7 +67,7 @@ class Controller extends Component{
                 </button>
             </div>)
         } else if(this.state.start && this.state.reset ){
-            output=(<div>
+            output=(<div className="controller-block">
                 <button 
                        className="btn btn-success btn-lg px-5 ml-5"
                        onClick={event => this.startHandler()}
