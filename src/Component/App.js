@@ -3,9 +3,8 @@ import './App.css';
 import CountDown from './CountDown/CountDown'
 import Controller from './Controller/Controller'
 import Title from './Title/Title';
-
-class App extends Component {
-
+import Laps from './Laps/Laps';
+class App extends Component{
   constructor(props){
     super(props)
     this.state={
@@ -17,7 +16,6 @@ class App extends Component {
 	  laps: []
     }
   }
-
   getStart(){
     this.intervalID = setInterval(() => {
       let min = this.state.time.min
@@ -45,7 +43,6 @@ class App extends Component {
   getPause(){
     clearInterval(this. intervalID)
   }
- 
   getLap(){
     let time = {
       ...this.state.time
@@ -63,10 +60,10 @@ class App extends Component {
         min: 0,
         sec: 0,
         mili: 0
-      }
+      },
+	  laps: []
     })
   }
-
   render() {
     return (
       <div className="App">
@@ -81,6 +78,7 @@ class App extends Component {
                   reset =  {this.getReset.bind(this)}
                   lap = {this.getLap.bind(this)}
                 />
+				<Laps className="my-5" laps={ this.state.laps} />
             </div>
           </div>
         </div>
