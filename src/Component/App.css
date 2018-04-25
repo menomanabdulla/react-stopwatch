@@ -1,3 +1,5 @@
 App{
 	background: rgba(222,219,219,0.47);
+	border: 1px solid transparent;
+	padding: 5px;
 }
